@@ -1,0 +1,295 @@
+body {
+  background-image: url("../styles/wallpaper/page/main/wpp-loging-page.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+.h-element {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #2a2d32;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  z-index: 1000;
+}
+
+.menu-logo {
+  cursor: pointer;
+  margin-left: 170px;
+  margin-top: 5px;
+}
+
+.menu-login,
+.menu-logout {
+  cursor: pointer;
+  color: rgb(174, 239, 174);
+  font-size: 24px;
+  padding-top: 3px;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 160px;
+}
+
+.menu-logout {
+  color: red;
+}
+
+.menu-login:hover {
+  color: rgb(69, 184, 69);
+}
+
+.menu-logout:hover {
+  color: rgb(206, 55, 55);
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-logo {
+    margin-left: 80px;
+    margin-top: 6px;
+  }
+
+  .menu-login,
+  .menu-logout {
+    font-size: 20px;
+    margin-right: 100px;
+    padding-top: 9px;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .menu-logo {
+    margin-top: 5px;
+  }
+  .menu-logo img {
+    width: 50%;
+  }
+
+  .menu-login,
+  .menu-logout {
+    padding-top: 2px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu-logo {
+    padding-left: unset;
+    margin-left: unset;
+  }
+
+  /* .menu-login,
+  .menu-logout {
+    padding-right: unset;
+    margin-right: unset;
+  } */
+}
+
+.login-status {
+  color: red;
+}
+
+.portfolio-dashboard {
+  padding-top: 100px;
+  background-image: url("../styles//wallpaper//page/portfolio/5096160.jpg");
+  display: block;
+  margin: auto;
+  width: 72%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .portfolio-dashboard {
+    width: 100%;
+  }
+}
+
+.balance {
+  font-size: 18px;
+  color: white;
+  text-align: right;
+  padding: 50px;
+  margin-right: 90px;
+  margin: 14px;
+}
+
+@media only screen and (max-width: 700px) {
+  .balance {
+    text-align: center;
+    padding: unset;
+    margin-right: unset;
+  }
+}
+
+.sort-by {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+}
+
+.sort-by button {
+  padding: 10px;
+}
+
+.text-sort-by {
+  font-size: 20px;
+  color: rgb(163, 103, 103);
+  padding-bottom: 10px;
+}
+
+.dialog-login h2,
+.dialog-login .dialog-content,
+.dialog-login .dialog-action {
+  background-color: #d1d3d8;
+  color: white;
+}
+
+.portfolio-table {
+  display: block;
+  margin: auto;
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+/* sort arrow up */
+.MuiDataGrid-sortIcon {
+  color: #ffcc00;
+}
+
+/* sort arrow down */
+.MuiDataGrid-sortIcon.MuiDataGrid-sortDescending {
+  color: #ff0000;
+}
+
+.MuiTablePagination-root {
+  color: unset !important;
+}
+
+.modal-edit-coin .MuiBox-root {
+  background-color: rgb(232, 208, 208);
+}
+
+.modal-edit-coin button {
+  display: block;
+  margin: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .menu-login,
+  .menu-logout {
+    font-size: 20px;
+    margin-right: 50px;
+  }
+}
+
+.menu-logo label {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 400px) {
+  .menu-logo label {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .menu-logo label {
+    font-size: 40px;
+  }
+}
+
+.portfolio-dashboard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  max-width: 900px;
+  margin: 32px auto;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.portfolio-dashboard .MuiTypography-root {
+  font-weight: 700;
+  color: #1976d2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.portfolio-dashboard .MuiButton-contained {
+  background: linear-gradient(45deg, #1976d2 30%, #42a5f5 90%);
+  color: white;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(25, 118, 210, 0.4);
+  transition: background 0.3s ease;
+}
+
+.portfolio-dashboard .MuiButton-contained:hover {
+  background: linear-gradient(45deg, #1565c0 30%, #64b5f6 90%);
+}
+
+.portfolio-dashboard .MuiDataGrid-root {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.portfolio-dashboard .MuiDataGrid-columnHeaders {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.portfolio-dashboard .MuiDataGrid-cell {
+  color: #444;
+}
+
+.MuiModal-root > div {
+  border-radius: 12px !important;
+}
+
+.portfolio-dashboard .MuiBox-root > .MuiTextField-root {
+  margin-bottom: 16px;
+}
+
+.portfolio-dashboard .MuiTextField-root input {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.MuiDataGrid-root {
+  color: #fff;
+  background-color: #121212;
+}
+
+.MuiDataGrid-columnHeaders {
+  color: #fff !important;
+  background-color: #3a5877 !important;
+  border-radius: 7px;
+}
+
+.MuiDataGrid-cell {
+  color: #fff !important;
+}
+
+.MuiDataGrid-footerContainer {
+  color: #fff !important;
+  background-color: #3a5877 !important;
+  border-radius: 7px;
+}
+
+.MuiTablePagination-root {
+  color: #fff !important;
+}

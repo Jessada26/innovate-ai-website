@@ -1,0 +1,54 @@
+@import "./mixins";
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+  > div {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 26px;
+    line-height: 95px;
+  }
+}
+
+.item1to1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  text-align: left !important;
+  margin-top: 6px;
+}
+
+.item3to1 {
+  grid-column-start: 3;
+  grid-column-end: 1;
+  text-align: left !important;
+  margin-top: 6px;
+}
+
+.item1to5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  text-align: left !important;
+}
+
+@include mobile {
+  .item1to1 {
+    grid-column-start: 5;
+    grid-column-end: 1;
+    text-align: center !important;
+  }
+
+  .gridContainer {
+    padding: unset;
+    > div {
+      padding: 15px 0;
+      font-size: 20px;
+      line-height: unset;
+    }
+  }
+  .item1to1 {
+    margin-top: unset;
+  }
+}

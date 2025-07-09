@@ -1,0 +1,24 @@
+@import './mixins';
+
+.button {
+  border: none;
+  color: white;
+  background-color: #2dc83a;
+  padding: 13px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 32px 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  &:hover {
+    background-color: #ce1e4a;
+  }
+}
+
+@include mobile {
+  .button {
+    margin: 10px 1px;
+  }
+}

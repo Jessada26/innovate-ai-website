@@ -1,0 +1,42 @@
+.form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  max-height: 100%;
+}
+
+.loginStatus {
+  color: red;
+  font-size: 1.0rem;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3cbc8d;
+  color: white;
+}
+
+.button {
+  border: none;
+  color: white;
+  background-color: #50d754;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  &:hover {
+    background-color: #4caf50;
+  }
+  width: 100%;
+}
