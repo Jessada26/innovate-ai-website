@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios, { AxiosError } from "axios";
 import { useRouter } from "next/router";
 import { getCookie } from "cookies-next";
 import {
@@ -53,8 +54,15 @@ const BookPage = () => {
       );
       setBooks(res.data);
       setTotalCount(res.total);
-    } catch {
-      setMessageAlert("Failed to load books");
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        const axiosErr = err as AxiosError<{ message: string }>;
+        setMessageAlert(
+          axiosErr.response?.data?.message ?? "Failed to load books"
+        );
+      } else {
+        setMessageAlert("Unexpected error");
+      }
       setOpenAlert(true);
     }
   };
@@ -95,8 +103,15 @@ const BookPage = () => {
       }
       setOpenModal(false);
       fetchBooks();
-    } catch {
-      setMessageAlert("Failed to save book");
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        const axiosErr = err as AxiosError<{ message: string }>;
+        setMessageAlert(
+          axiosErr.response?.data?.message ?? "Failed to save book"
+        );
+      } else {
+        setMessageAlert("Unexpected error");
+      }
       setOpenAlert(true);
     }
   };
@@ -105,8 +120,15 @@ const BookPage = () => {
     try {
       await deleteBook(id);
       fetchBooks();
-    } catch {
-      setMessageAlert("Failed to delete book");
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        const axiosErr = err as AxiosError<{ message: string }>;
+        setMessageAlert(
+          axiosErr.response?.data?.message ?? "Failed to delete book"
+        );
+      } else {
+        setMessageAlert("Unexpected error");
+      }
       setOpenAlert(true);
     }
   };
@@ -138,8 +160,13 @@ const BookPage = () => {
       if (!getCookie("access_token")) {
         router.push("/");
       }
-    } catch (err) {
-      setMessageAlert("logout");
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        const axiosErr = err as AxiosError<{ message: string }>;
+        setMessageAlert(axiosErr.response?.data?.message ?? "Failed to logout");
+      } else {
+        setMessageAlert("Unexpected error");
+      }
       setOpenAlert(true);
     }
   };
